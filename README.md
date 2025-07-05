@@ -25,53 +25,75 @@ Este proyecto es la interfaz de usuario de un portafolio personal desarrollado e
 
 ## 📦 Instalación
 
-1. Clona el repositorio:
+### 1. Clona el repositorio
 
 ```bash
 git clone https://github.com/tu-usuario/miportafolio-frontend.git
 cd miportafolio-frontend
-Instala las dependencias:
+```
 
-bash
-Copiar
-Editar
+### 2. Instala las dependencias
+
+```bash
 npm install
-Inicia la aplicación:
+```
 
-bash
-Copiar
-Editar
+### 3. Inicia la aplicación
+
+```bash
 npm start
-Por defecto se ejecuta en http://localhost:3000.
+```
 
-✅ Asegúrate de que el backend (Django) esté corriendo en http://127.0.0.1:8000.
+Por defecto se ejecuta en [http://localhost:3000](http://localhost:3000).
 
-📁 Estructura del proyecto
-arduino
-Copiar
-Editar
+✅ Asegúrate de que el backend (Django) esté corriendo en [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+---
+
+## 📁 Estructura del proyecto
+
+```
 miportafolio-frontend/
 ├── public/
 ├── src/
 │   ├── components/
-│   │   ├── LoginForm.js
-│   │   └── FormularioProyecto.js
+│   │   ├── LoginForm.jsx
+│   │   ├── FormularioProyecto.jsx
+│   │   └── Navbar.js
+│   ├── pages/
+│   │   ├── CrearProyecto.jsx
+│   │   └── ListaProyectos.jsx
+│   ├── services/
 │   ├── App.js
-│   └── index.js
+│   ├── index.js
+│   └── App.css
 ├── tailwind.config.js
 ├── postcss.config.js
+├── .gitignore
+├── package.json
 └── README.md
-🔐 Autenticación
-Se utiliza el endpoint POST /api/token/ del backend en Django para obtener los tokens access y refresh.
+```
 
-Los tokens se almacenan en localStorage.
+---
 
-El token de acceso se incluye automáticamente en los headers como Authorization: Bearer <token> para consumir rutas protegidas.
+## 🔐 Autenticación
 
-📝 Notas
-Este proyecto es parte de un sistema fullstack, junto con el backend en Django: miportafolio-backend.
+Se utiliza el endpoint `POST /api/token/` del backend en Django para obtener los tokens **access** y **refresh**.
+
+- Los tokens se almacenan en `localStorage`.
+- El token de acceso se incluye automáticamente en los headers como:  
+  `Authorization: Bearer <token>`, para consumir rutas protegidas.
+
+---
+
+## 📝 Notas
+
+Este proyecto es parte de un sistema fullstack, junto con el backend en Django: **miportafolio-backend**.
 
 Puedes adaptar este frontend fácilmente para mostrar otras entidades, como artículos, experiencias laborales o habilidades técnicas.
 
-👨‍💻 Autor
-Desarrollado por Jesús Alejandro Morales
+---
+
+## 👨‍💻 Autor
+
+Desarrollado por **Jesús Alejandro Morales**
